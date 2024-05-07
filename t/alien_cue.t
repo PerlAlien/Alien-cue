@@ -1,7 +1,10 @@
 use Test2::V0 -no_srand => 1;
 use Alien::cue;
+use Test::Alien;
 
-ok 1, 'todo';
+alien_ok 'Alien::cue';
+run_ok(['cue', 'version'])
+  ->note;
 
 done_testing;
 
